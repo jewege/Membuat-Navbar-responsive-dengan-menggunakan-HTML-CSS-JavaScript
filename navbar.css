@@ -1,0 +1,142 @@
+* {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style-type: none;
+      font-family: 'Poppins', sans-serif;
+}
+
+nav {
+      background-color: #ececf4;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+}
+
+.hamburger {
+      display: none;
+      cursor: pointer;
+}
+
+.bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all .6s ease-in-out;
+      background-color: #000;
+}
+
+.nav-menu li {
+      padding: 10px;
+      display: inline-block;
+}
+
+.logo {
+      font-weight: 600;
+      font-size: 20px;
+      margin-left: 10%;
+      cursor: pointer;
+}
+
+.logo:hover {
+      transform: rotate(2deg);
+      color: rgb(71, 207, 231);
+      transition: .3s ease;
+}
+
+.nav-menu li a {
+      font-weight: 500;
+      color: #000;
+}
+
+.nav-menu li a:hover {
+      color: rgb(71, 207, 231);
+      transition: all .2s ease;
+}
+
+.btn-explore {
+      border: none;
+      color: #eaeaea;
+      background: #000;
+      padding: 7px;
+      margin-right: 10%;
+}
+
+.btn-explore:hover {
+      background-color: rgb(71, 207, 231);
+      color: #000;
+      transition: all .2s ease;
+}
+
+@media screen and (max-width:676px) {
+      header {
+            margin: 0 auto;
+            width: 100%;
+      }
+
+      nav {
+            width: 100%;
+            justify-content: space-between;
+      }
+
+      .btn-explore {
+            display: none;
+      }
+
+      .logo {
+            margin-left: 5px;
+      }
+
+      .hamburger {
+            display: block;
+            margin-right: 10px;
+      }
+
+      .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+      }
+
+      .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(765deg);
+      }
+
+      .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-764deg);
+      }
+
+      .nav-menu {
+            position: fixed;
+            width: 100%;
+            height: 50vh;
+            background: #ececf4;
+            top: 79px;
+            flex-direction: column;
+            left: -100%;
+            text-align: center;
+            transition: 0.5s;
+            z-index: 1;
+      }
+
+      .nav-menu li {
+            line-height: 50px;
+            display: block;
+      }
+
+      .nav-menu.active {
+            left: 0;
+      }
+
+      .nav-menu li a {
+            color: #000;
+      }
+
+      .header-bg {
+            width: 100%;
+      }
+}
